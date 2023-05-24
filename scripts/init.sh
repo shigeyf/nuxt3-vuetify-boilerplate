@@ -45,7 +45,7 @@ curl -sLO https://gist.github.com/shigeyf/13963ab2120820f163504d6e49149025/raw/l
 cp .gitignore .eslintignore
 cp .gitignore .prettierignore
 
-FILES="prettier.config.js .eslintrc.js stylelint.config.js"
+FILES="prettier.config.js .eslintrc.js stylelint.config.js lint-staged.config.js"
 for i in ${FILES}
 do
   cat $i | awk '/^\/\/ \[run\]/{flag=1;next} /\/\/ \[\/run\]/{flag=0} {if(flag){print $0}}' | sed 's;^// ;;' | while read CMD
