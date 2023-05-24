@@ -6,9 +6,28 @@
 
 import { createVuetify } from 'vuetify'
 import { mdi, aliases } from 'vuetify/iconsets/mdi-svg'
+import { fa } from 'vuetify/iconsets/fa-svg'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+// eslint-disable-next-line
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 import { DEFAULT_THEME, lightTheme, darkTheme } from '@/utils/themes'
 
+// FontAwesome Setup:
+// This is important, we are going to let Nuxt worry about the CSS
+config.autoAddCss = false
+// You can add your icons directly in this plugin.
+// See other examples for how you can add other styles or just individual icons.
+library.add(fas)
+library.add(far)
+library.add(fab)
+
 export default defineNuxtPlugin((nuxtApp) => {
+  // Register font-awesome-icon component globally
+  nuxtApp.vueApp.component('font-awesome-icon', FontAwesomeIcon)
+
   const vuetify = createVuetify({
     ssr: true,
     icons: {
@@ -16,6 +35,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       aliases,
       sets: {
         mdi,
+        fa,
       },
     },
     theme: {

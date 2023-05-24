@@ -5,6 +5,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 ## Features
 
 - [x] ⚡ Integrate with Vuetify 3
+- [x] 😀 Added fonts support: Material Design Icon SVG & FontAwesome SVG
 - [x] ✨ Code Formtatting and Linting tools: Prettier, ESLint, StyleLint & lint-staged
 - [x] ⭐ Commit Log Formatting & Linting tools: Commitizen, git-cz & commitlint
 - [x] 🐕 Husky for Git hooks (commit-msg, pre-commit, prepare-commit-msg)
@@ -58,9 +59,18 @@ The following NPM modules are added to this plain Nuxt3 app template.
 - sass
 - vite-plugin-vuetify
 - @mdi/js
+- @fortawesome/fontawesome-svg-core
+- @fortawesome/vue-fontawesome
+- @fortawesome/free-solid-svg-icons
+- @fortawesome/free-regular-svg-icons
+- @fortawesome/free-brands-svg-icons
 
 ```bash
 npm install --save-dev vuetify sass vite-plugin-vuetify @mdi/js
+npm install --save-dev @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome
+npm install --save-dev @fortawesome/free-solid-svg-icons
+npm install --save-dev @fortawesome/free-regular-svg-icons
+npm install --save-dev @fortawesome/free-brands-svg-icons
 ```
 
 `nuxt.config.ts` is updated to setup Veutify 3.
