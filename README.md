@@ -2,6 +2,13 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Features
+
+- [x] ⚡ Integrate with Vuetify 3
+- [x] ✨ Code Formtatting and Linting tools: Prettier, ESLint, StyleLint & lint-staged
+- [x] ⭐ Commit Log Formatting & Linting tools: Commitizen, git-cz & commitlint
+- [x] 🐕 Husky for Git hooks (commit-msg, pre-commit, prepare-commit-msg)
+
 ## Setup
 
 Make sure to install the dependencies:
