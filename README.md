@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# A minimal starter boilerplate project for Nuxt 3 application with Vuetify 3
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -40,3 +40,26 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Notes
+
+### Integrate with Vuetify 3
+
+The following NPM modules are added to this plain Nuxt3 app template.
+
+- vuetify
+- sass
+- vite-plugin-vuetify
+- @mdi/js
+
+```bash
+npm install --save-dev vuetify sass vite-plugin-vuetify @mdi/js
+```
+
+`nuxt.config.ts` is updated to setup Veutify 3.
+
+Also, the following files are added:
+
+- src/plugins/veutify.ts
+- src/utils/themes.ts
+- src/assets/scss/main.scss
