@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
-  css: ['@/assets/scss/main.scss', '@fortawesome/vue-fontawesome'],
+  css: ['@/assets/scss/main.scss', '@fortawesome/fontawesome-svg-core/styles.css'],
   hooks: {
     'vite:extendConfig': (config) => {
       config.plugins!.push(vuetify())
