@@ -9,7 +9,7 @@ import { mdi, aliases } from 'vuetify/iconsets/mdi-svg'
 import { fa } from 'vuetify/iconsets/fa-svg'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 // eslint-disable-next-line
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -27,6 +27,8 @@ library.add(fab)
 export default defineNuxtPlugin((nuxtApp) => {
   // Register font-awesome-icon component globally
   nuxtApp.vueApp.component('font-awesome-icon', FontAwesomeIcon)
+  nuxtApp.vueApp.component('font-awesome-layers', FontAwesomeLayers)
+  nuxtApp.vueApp.component('font-awesome-layers-text', FontAwesomeLayersText)
 
   const vuetify = createVuetify({
     ssr: true,
